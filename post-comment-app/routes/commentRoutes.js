@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Post = require('../models/posts');
+const Post = require('../models/Post');
 
 // Create a comment for a post
 router.post('/:postId/comments', async (req, res) => {
@@ -13,18 +13,12 @@ router.post('/:postId/comments', async (req, res) => {
       return res.status(404).send('Post not found');
     }
 
-    const newComment = {
-      content: content,
-      date: new Date()
-    };
-
-    post.comments.push(newComment);
+    post.comments.push({ content });
     await post.save();
 
-    res.status(201).json({ comments: post.comments });
+    res.status(201).json(post.comments);
   } catch (error) {
-    console.error('Error creating comment:', error);
-    res.status(500).send('Server error');
+    next(error); // Pass error to error handling middleware
   }
 });
 
