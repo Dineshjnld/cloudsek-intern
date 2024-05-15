@@ -68,43 +68,5 @@ npm start
 
 8. Open your browser and visit http://localhost:3000 to view the application.
 
-## Deployment
 
-The frontend can be deployed using Vercel, and the backend can be deployed using a platform like Heroku.
 
-To deploy the frontend:
-
-1. Sign up for an account on [Vercel](https://vercel.com/).
-2. Connect your GitHub repository to Vercel.
-3. Follow the deployment instructions provided by Vercel.
-
-To deploy the backend:
-
-1. Sign up for an account on [Heroku](https://www.heroku.com/).
-2. Connect your GitHub repository to Heroku.
-3. Follow the deployment instructions provided by Heroku.
-
-## Folder Structure
-
-```
-post-comments-service/
-├── client/               # Frontend code
-│   ├── public/           # Public assets
-│   └── src/              # Source code
-├── models/               # Database models
-├── routes/               # Backend routes
-└── server.js             # Backend server file
-```
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit pull requests or open issues if you encounter any problems or have suggestions for improvements.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-```
-
-You can replace `<repository_url>` with the URL of your GitHub repository. Customize the README.md according to your project's specific details and requirements.
-
-Let me know if you need further assistance!
