@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/post-comments', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://dineshjnld00:Tw6w976EqRLRIWsE@cluster0.hz3aj77.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
