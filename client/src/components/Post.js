@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import CommentForm from './CommentForm';
 import Comment from './Comment';
 
-function Post({ post }) {
+function Post({ post, onCommentSubmit }) {
   const [comments, setComments] = useState(post.comments || []);
 
   const handleCommentSubmit = (updatedComments) => {
     setComments(updatedComments);
+    onCommentSubmit(post._id, updatedComments);
   };
 
   return (

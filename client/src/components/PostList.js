@@ -8,10 +8,7 @@ function PostList() {
   useEffect(() => {
     fetchPosts();
 
-    // Poll for new posts every 10 seconds
-    const intervalId = setInterval(fetchPosts, 1000);
-
-    // Clean up interval when component unmounts
+    const intervalId = setInterval(fetchPosts, 10000);
     return () => clearInterval(intervalId);
   }, []);
 
@@ -25,7 +22,6 @@ function PostList() {
   };
 
   const handleCommentSubmit = (postId, updatedComments) => {
-    // Update the post's comments in the local state
     setPosts((prevPosts) =>
       prevPosts.map((post) =>
         post._id === postId ? { ...post, comments: updatedComments } : post
