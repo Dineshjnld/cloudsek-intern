@@ -1,6 +1,6 @@
 Certainly! Here's a README.md template for your project:
 
-```markdown
+markdown
 # Post-Comments Service
 
 This is a basic Post-Comments Service where users can create text-based posts and comment on these posts.
@@ -27,7 +27,7 @@ To run this project locally, follow these steps:
 1. Clone the repository:
 
 ```
-git clone <repository_url>
+git clone https://github.com/Dineshjnld/cloudsek-intern.git
 ```
 
 2. Navigate to the project directory:
