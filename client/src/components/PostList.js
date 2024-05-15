@@ -17,7 +17,7 @@ function PostList() {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/posts');
+      const response = await axios.get('https://cloudsek-intern-1.onrender.com/api/posts');
       setPosts(response.data);
     } catch (error) {
       console.error('Error fetching posts:', error);

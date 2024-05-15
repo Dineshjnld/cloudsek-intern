@@ -16,7 +16,7 @@ function PostForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/posts', newPost);
+      await axios.post('https://cloudsek-intern-1.onrender.com/api/posts', newPost);
       setNewPost({ title: '', content: '' });
       // Optionally, you can fetch the posts again to update the list
     } catch (error) {

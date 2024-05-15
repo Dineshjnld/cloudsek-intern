@@ -11,7 +11,7 @@ function CommentForm({ postId, onCommentSubmit }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`http://localhost:5000/api/posts/${postId}/comments`, { content: newComment });
+      const response = await axios.post(`https://cloudsek-intern-1.onrender.com/api/posts/${postId}/comments`, { content: newComment });
       const updatedComments = response.data.comments;
       onCommentSubmit(updatedComments);
       setNewComment('');
