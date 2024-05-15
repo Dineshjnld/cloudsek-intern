@@ -13,7 +13,8 @@ mongoose.connect('mongodb+srv://dineshjnld00:Tw6w976EqRLRIWsE@cluster0.hz3aj77.m
 
 app.use(bodyParser.json());
 app.use('/api/posts', postRoutes);
-app.use('/api/posts', commentRoutes);
+app.use('/api/comments', commentRoutes);
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
