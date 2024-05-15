@@ -11,9 +11,10 @@ function CommentForm({ postId, onCommentSubmit }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      console.log('Submitting comment...');
       const response = await axios.post(`https://cloudsek-intern-1.onrender.com/api/posts/${postId}/comments`, { content: newComment });
-      const updatedComments = response.data.comments;
-      onCommentSubmit(updatedComments);
+      console.log('Comment created successfully:', response.data);
+      onCommentSubmit(response.data.comments);
       setNewComment('');
     } catch (error) {
       console.error('Error creating comment:', error);
