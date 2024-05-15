@@ -1,6 +1,3 @@
-Certainly! Here's a README.md template for your project:
-
-markdown
 # Post-Comments Service
 
 This is a basic Post-Comments Service where users can create text-based posts and comment on these posts.
