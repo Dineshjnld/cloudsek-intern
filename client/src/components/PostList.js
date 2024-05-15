@@ -9,7 +9,7 @@ function PostList() {
     fetchPosts();
 
     // Poll for new posts every 10 seconds
-    const intervalId = setInterval(fetchPosts, 10000);
+    const intervalId = setInterval(fetchPosts, 1000);
 
     // Clean up interval when component unmounts
     return () => clearInterval(intervalId);
