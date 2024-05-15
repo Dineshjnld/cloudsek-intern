@@ -3,9 +3,11 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const postRoutes = require('./routes/posts');
 const commentRoutes = require('./routes/comments');
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+app.use(cors());
 
 mongoose.connect('mongodb+srv://dineshjnld00:Tw6w976EqRLRIWsE@cluster0.hz3aj77.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-
 function PostForm() {
   const [newPost, setNewPost] = useState({ title: '', content: '' });
 
@@ -16,7 +15,9 @@ function PostForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://cloudsek-intern-1.onrender.com/api/posts', newPost);
+      console.log('Submitting form...');
+      const response = await axios.post('https://cloudsek-intern-1.onrender.com/api/posts', newPost);
+      console.log('Post created successfully:', response.data);
       setNewPost({ title: '', content: '' });
       // Optionally, you can fetch the posts again to update the list
     } catch (error) {
